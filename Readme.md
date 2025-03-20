@@ -1,38 +1,40 @@
 # Pretty Logging [![NuGet Version](https://img.shields.io/nuget/vpre/PrettyLogging.Console?style=flat)](https://www.nuget.org/packages/PrettyLogging.Console)
 
-Make `Microsoft.Extensions.Logging` easier on the eyes!
+Enhance the readability of `Microsoft.Extensions.Logging` output!
 
-![A image shows the logging output](https://raw.githubusercontent.com/xiaomi7732/PrettyLogging/main/docs/images/logging.png)
+![Logging output example](https://raw.githubusercontent.com/xiaomi7732/PrettyLogging/main/docs/images/logging.png)
 
-Starting from version `1.0.1`, line breaks in single-line logs are now honored by default.
+Starting with version `1.0.1`, line breaks in single-line logs are now preserved by default.
 
-![A image shows the line breaker](https://raw.githubusercontent.com/xiaomi7732/PrettyLogging/main/docs/images/line-breaker-message.png)
+![Line break example](https://raw.githubusercontent.com/xiaomi7732/PrettyLogging/main/docs/images/line-breaker-message.png)
 
-## ⭐ if you like it ![GitHub Repo stars](https://img.shields.io/github/stars/xiaomi7732/PrettyLogging?style=plastic)
+## ⭐ Show your support! ![GitHub Repo stars](https://img.shields.io/github/stars/xiaomi7732/PrettyLogging?style=plastic)
 
-If you like this project, please ⭐️ it by clicking the star in the top-right corner to help others discover it!
+If you enjoy this project, please give it a ⭐️ to help others discover it!
 
-Got ideas or found a bug? Feel free to open an issue and share your feedback!
+Have suggestions or found a bug? Open an issue and share your feedback!
 
-## Getting started
+## Getting Started
 
-1. Install the NuGet package:
+1. **Install the NuGet package:**
 
-    Run the following command to add the package:
+    Add the package to your project by running:
 
     ```shell
     dotnet add package PrettyLogging.Console
     ```
 
-1. Optionally, always keep up with the latest by using floating version:
+1. **Stay up-to-date with floating versions (optional):**
+
+    Use a floating version to always get the latest updates:
 
     ```xml
     <PackageReference Include="PrettyLogging.Console" Version="[1.*-*, 2.0)" />
     ```
 
-    See [UsePrettyLogging.Console.csproj](https://github.com/xiaomi7732/PrettyLogging/blob/757621b339f0ccd7d7fc47e97e8a87dddd8ed4ed/examples/UsePrettyLogging.Console/UsePrettyLogging.Console.csproj#L5) for example.
+    For an example, see [UsePrettyLogging.Console.csproj](https://github.com/xiaomi7732/PrettyLogging/blob/main/examples/UsePrettyLogging.Console/UsePrettyLogging.Console.csproj#L5).
 
-1. Set up Pretty Logging in your app
+1. **Set up Pretty Logging in your app:**
 
     Add the `PrettyIt()` method to your logger configuration:
 
@@ -40,18 +42,17 @@ Got ideas or found a bug? Feel free to open an issue and share your feedback!
     builder.Logging.PrettyIt();
     ```
 
-    For a full example, check out [Program.cs](./examples/UsePrettyLogging.WebAPI/Program.cs).
+    - For a complete example, see [Program.cs](./examples/UsePrettyLogging.WebAPI/Program.cs).
+    - For **console applications**, refer to this [Program.cs](examples/UsePrettyLogging.Console/Program.cs).
 
-    If you are using this with an **Console application**, check out this [Program.cs](examples/UsePrettyLogging.Console/Program.cs).
+1. **Customize the output (optional):**
 
-1. Optionally, customize it:
+    Tailor the log output to your needs by adjusting options like log level visibility, timestamp inclusion, log format (single-line or multi-line), color behavior, and more. See [Options.md](docs/Options.md) for details.
 
-    You can customize log output by controlling options such as log level visibility, timestamp inclusion, log format (single-line or multi-line), color behavior and more. See [Options.md](docs/Options.md) for more details.
+1. **Enjoy cleaner logs:**
 
-1. Enjoy the clean output
-
-    * Console application
-        * Before:
+    - **Console application:**
+        - Before:
 
             ```log
             info: Program[0]
@@ -60,15 +61,15 @@ Got ideas or found a bug? Feel free to open an issue and share your feedback!
                 This is a warning!
             ```
 
-        * After:
+        - After:
 
             ```log
-            2025-01-03T16:28:30.2001407-08:00|INFO |Hello Pretty Logging
-            2025-01-03T16:28:30.2064911-08:00|WARN |This is a warning!
+            16:28:30.200|INFO |Hello Pretty Logging
+            16:28:30.206|WARN |This is a warning!
             ```
 
-    * WebAPI:
-        * Before:
+    - **WebAPI:**
+        - Before:
 
             ```log
             info: Microsoft.Hosting.Lifetime[14]
@@ -89,15 +90,15 @@ Got ideas or found a bug? Feel free to open an issue and share your feedback!
                 Request finished HTTP/1.1 GET http://localhost:5140/ - 200 - text/plain;+charset=utf-8 36.5664ms
             ```
 
-        * After:
+        - After:
 
             ```log
-            2025-01-03T17:56:08.7340978-08:00|INFO |Now listening on: http://localhost:5140
-            2025-01-03T17:56:08.7401957-08:00|INFO |Application started. Press Ctrl+C to shut down.
-            2025-01-03T17:56:08.7408854-08:00|INFO |Hosting environment: Development
-            2025-01-03T17:56:08.7409246-08:00|INFO |Content root path: C:\AIR\PrettyLogging\examples\UsePrettyLogging.WebAPI
-            2025-01-03T17:56:18.2800129-08:00|INFO |Request starting HTTP/1.1 GET http://localhost:5140/ - - -
-            2025-01-03T17:56:18.3165023-08:00|INFO |Executing endpoint 'HTTP: GET /'
-            2025-01-03T17:56:18.3196735-08:00|INFO |Executed endpoint 'HTTP: GET /'
-            2025-01-03T17:56:18.3273233-08:00|INFO |Request finished HTTP/1.1 GET http://localhost:5140/ - 200 - text/plain;+charset=utf-8 41.9690ms
+            17:56:08.734|INFO |Now listening on: http://localhost:5140
+            17:56:08.740|INFO |Application started. Press Ctrl+C to shut down.
+            17:56:08.740|INFO |Hosting environment: Development
+            17:56:08.740|INFO |Content root path: C:\AIR\PrettyLogging\examples\UsePrettyLogging.WebAPI
+            17:56:18.280|INFO |Request starting HTTP/1.1 GET http://localhost:5140/ - - -
+            17:56:18.316|INFO |Executing endpoint 'HTTP: GET /'
+            17:56:18.319|INFO |Executed endpoint 'HTTP: GET /'
+            17:56:18.327|INFO |Request finished HTTP/1.1 GET http://localhost:5140/ - 200 - text/plain;+charset=utf-8 41.9690ms
             ```
