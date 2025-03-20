@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.5.002.0
+VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{58CB21AB-EA10-43E9-907E-D5D626844B1B}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsePrettyLogging.WebAPI", "examples\UsePrettyLogging.WebAPI\UsePrettyLogging.WebAPI.csproj", "{ED0212EE-CE17-40E6-82FA-247A3EC9FAAE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsePrettyLogging.Console.Fx", "examples\UsePrettyLogging.Console.Fx\UsePrettyLogging.Console.Fx.csproj", "{84AC5087-4EBC-45C8-94EE-41BFB2BF4780}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsePrettyLogging.WebAPI_AOT", "examples\UsePrettyLogging.WebAPI_AOT\UsePrettyLogging.WebAPI_AOT.csproj", "{2492062F-B532-45BD-BBB4-230720BAB84C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{84AC5087-4EBC-45C8-94EE-41BFB2BF4780}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84AC5087-4EBC-45C8-94EE-41BFB2BF4780}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84AC5087-4EBC-45C8-94EE-41BFB2BF4780}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2492062F-B532-45BD-BBB4-230720BAB84C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2492062F-B532-45BD-BBB4-230720BAB84C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2492062F-B532-45BD-BBB4-230720BAB84C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2492062F-B532-45BD-BBB4-230720BAB84C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{24BF0218-E798-4827-AC1F-27D01DB598A3} = {0851D98F-36E2-485A-9AC3-7A3E3A146CD4}
 		{ED0212EE-CE17-40E6-82FA-247A3EC9FAAE} = {58CB21AB-EA10-43E9-907E-D5D626844B1B}
 		{84AC5087-4EBC-45C8-94EE-41BFB2BF4780} = {58CB21AB-EA10-43E9-907E-D5D626844B1B}
+		{2492062F-B532-45BD-BBB4-230720BAB84C} = {58CB21AB-EA10-43E9-907E-D5D626844B1B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A4C1A2C0-0171-4792-8033-F9C4C578AF8C}

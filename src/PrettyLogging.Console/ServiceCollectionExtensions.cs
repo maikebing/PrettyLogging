@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging.Console;
 using PrettyLogging.Console;
@@ -35,7 +36,7 @@ public static class ServiceCollectionExtensions
         loggingBuilder.AddConsoleFormatter<LoggingFormatter, LoggingFormatterOptions>(options);
         return loggingBuilder;
     }
-
+ 
     /// <summary>
     /// A syntax sugar method to append pretty formatter to console logger.
     /// This will only take effect if no console formatter or only simple console formatter

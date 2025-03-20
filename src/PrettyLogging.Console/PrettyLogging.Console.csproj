@@ -11,7 +11,13 @@
     <PackageReadmeFile>Readme.md</PackageReadmeFile>
     <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
-
+  <PropertyGroup  Condition=" '$(TargetFramework)' == 'net9.0' ">
+    <PublishAot>true</PublishAot>
+    <IsAotCompatible>true</IsAotCompatible>
+    <StripSymbols>false</StripSymbols>
+    <EnableConfigurationBindingGenerator>true</EnableConfigurationBindingGenerator>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'net462' ">
     <PackageReference Include="Microsoft.Extensions.Logging.Console" VersionOverride="6.0.0" />
   </ItemGroup>
